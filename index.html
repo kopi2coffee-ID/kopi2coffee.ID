@@ -22,22 +22,14 @@
                         serif: ['"Playfair Display"', 'serif'],
                     },
                     colors: {
-                        // Palet Warna Hijau Daun (Leaf Green) Premium
-                        leaf: {
-                            50: '#f2f9f5',
-                            100: '#e2f2ea',
-                            200: '#c5e5d5',
-                            300: '#99d0b5',
-                            400: '#66b58e',
-                            500: '#2d6a4f', // Hijau Daun Utama
-                            600: '#1b4332', // Hijau Daun Sedang
-                            700: '#081c15', // Hijau Daun Gelap (Latar Belakang Utama)
-                            800: '#040d0a', // Hijau Daun Sangat Gelap
-                            900: '#020705',
-                        },
-                        accent: {
-                            400: '#74c69d', // Hijau Daun Muda Terang
-                            500: '#52b788',
+                        // Palet Warna KOPI TU Resmi dari Logo
+                        kopi2coffee: {
+                            deep: '#0d522c',   // Hijau botani utama logo
+                            medium: '#0a3f22', // Hijau sedang untuk gradasi
+                            dark: '#052212',   // Hijau sangat gelap untuk depth
+                            black: '#000000',  // Hitam frame logo
+                            red: '#bc1b21',    // Merah ceri kopi untuk aksen/tombol
+                            light: '#f4fbf7',  // Putih bernuansa hijau super lembut
                         }
                     }
                 }
@@ -47,7 +39,7 @@
     <style>
         /* Custom smooth scroll and subtle glassmorphism integration */
         .glass {
-            background: rgba(8, 28, 21, 0.85);
+            background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
@@ -59,40 +51,38 @@
         }
     </style>
 </head>
-<body class="bg-leaf-700 text-white font-sans selection:bg-accent-500 selection:text-leaf-900 overflow-x-hidden">
+<body class="bg-kopi2coffee-dark text-white font-sans selection:bg-kopi2coffee-red selection:text-white overflow-x-hidden">
 
     <!-- NAVIGATION BAR -->
-    <nav class="fixed top-0 left-0 w-full z-50 glass border-b border-leaf-600/40 transition-all duration-300">
+    <nav class="fixed top-0 left-0 w-full z-50 glass border-b border-kopi2coffee-deep/30 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
                 <!-- Brand Logo -->
-                <a href="#" class="flex items-center gap-2 group">
-                    <span class="w-10 h-10 rounded-full bg-accent-500 flex items-center justify-center text-leaf-800 font-bold text-xl shadow-lg shadow-leaf-900/40 group-hover:bg-accent-400 transition-all">
-                        <i class="fa-solid fa-leaf"></i>
-                    </span>
-                    <span class="font-serif text-xl tracking-wider font-bold text-white group-hover:text-accent-400 transition-colors">
-                        JAVA <span class="text-accent-500">&</span> CO.
+                <a href="#" class="flex items-center gap-3 group">
+                    <img src="image_a42015.png" alt="Logo Kopi Tu" class="h-14 w-auto object-contain drop-shadow-[0_2px_8px_rgba(13,82,44,0.4)] group-hover:scale-105 transition-all">
+                    <span class="font-serif text-2xl tracking-wider font-bold text-white group-hover:text-kopi2coffee-red transition-colors">
+                        KOPI <span class="text-kopi2coffee-red">TU</span>
                     </span>
                 </a>
 
                 <!-- Desktop Menu Links -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#beranda" class="text-leaf-100 hover:text-accent-400 font-medium tracking-wide transition-colors">Beranda</a>
-                    <a href="#tentang" class="text-leaf-100 hover:text-accent-400 font-medium tracking-wide transition-colors">Tentang Kami</a>
-                    <a href="#menu" class="text-leaf-100 hover:text-accent-400 font-medium tracking-wide transition-colors">Katalog Menu</a>
-                    <a href="#kontak" class="text-leaf-100 hover:text-accent-400 font-medium tracking-wide transition-colors">Hubungi Kami</a>
+                    <a href="#beranda" class="text-stone-200 hover:text-kopi2coffee-red font-medium tracking-wide transition-colors">Beranda</a>
+                    <a href="#tentang" class="text-stone-200 hover:text-kopi2coffee-red font-medium tracking-wide transition-colors">Tentang Kami</a>
+                    <a href="#menu" class="text-stone-200 hover:text-kopi2coffee-red font-medium tracking-wide transition-colors">Katalog Menu</a>
+                    <a href="#kontak" class="text-stone-200 hover:text-kopi2coffee-red font-medium tracking-wide transition-colors">Hubungi Kami</a>
                 </div>
 
                 <!-- Reservation Button -->
                 <div class="hidden md:block">
-                    <a href="https://wa.me/6281234567890?text=Halo%20Java%20%26%20Co%2C%20saya%20ingin%20tanya%20mengenai%20menu%2Fmeja%20reservasi" target="_blank" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-accent-500 to-leaf-500 text-white font-semibold text-sm hover:brightness-110 active:scale-95 transition-all shadow-md shadow-leaf-900/30 flex items-center gap-2">
+                    <a href="https://wa.me/6281234567890?text=Halo%20Kopi%20Tu%2C%20saya%20ingin%20tanya%20mengenai%20menu%20dan%20reservasi" target="_blank" class="px-6 py-2.5 rounded-full bg-gradient-to-r from-kopi2coffee-red to-kopi2coffee-deep text-white font-semibold text-sm hover:brightness-110 active:scale-95 transition-all shadow-md shadow-black flex items-center gap-2">
                         <i class="fa-brands fa-whatsapp text-lg"></i> Tanya Reservasi
                     </a>
                 </div>
 
                 <!-- Mobile Hamburger Button -->
                 <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-leaf-100 hover:text-white focus:outline-none p-2 rounded-lg bg-leaf-800/60 border border-leaf-600" aria-label="Toggle Menu">
+                    <button id="mobile-menu-btn" class="text-stone-200 hover:text-white focus:outline-none p-2 rounded-lg bg-kopi2coffee-black/60 border border-kopi2coffee-deep/40" aria-label="Toggle Menu">
                         <i id="menu-icon" class="fa-solid fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -100,13 +90,13 @@
         </div>
 
         <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden md:hidden border-t border-leaf-600/80 bg-leaf-800 px-4 py-6 space-y-4">
-            <a href="#beranda" class="mobile-link block text-lg font-medium text-leaf-100 hover:text-accent-400 py-2">Beranda</a>
-            <a href="#tentang" class="mobile-link block text-lg font-medium text-leaf-100 hover:text-accent-400 py-2">Tentang Kami</a>
-            <a href="#menu" class="mobile-link block text-lg font-medium text-leaf-100 hover:text-accent-400 py-2">Katalog Menu</a>
-            <a href="#kontak" class="mobile-link block text-lg font-medium text-leaf-100 hover:text-accent-400 py-2">Hubungi Kami</a>
-            <div class="pt-4 border-t border-leaf-600">
-                <a href="https://wa.me/6281234567890?text=Halo%20Java%20%26%20Co%2C%20saya%20ingin%20tanya%20mengenai%20menu%2Fmeja%20reservasi" target="_blank" class="w-full justify-center px-6 py-3 rounded-full bg-gradient-to-r from-accent-500 to-leaf-500 text-white font-semibold flex items-center gap-2 shadow-lg shadow-leaf-900">
+        <div id="mobile-menu" class="hidden md:hidden border-t border-kopi2coffee-deep/40 bg-kopi2coffee-black px-4 py-6 space-y-4">
+            <a href="#beranda" class="mobile-link block text-lg font-medium text-stone-200 hover:text-kopi2coffee-red py-2">Beranda</a>
+            <a href="#tentang" class="mobile-link block text-lg font-medium text-stone-200 hover:text-kopi2coffee-red py-2">Tentang Kami</a>
+            <a href="#menu" class="mobile-link block text-lg font-medium text-stone-200 hover:text-kopi2coffee-red py-2">Katalog Menu</a>
+            <a href="#kontak" class="mobile-link block text-lg font-medium text-stone-200 hover:text-kopi2coffee-red py-2">Hubungi Kami</a>
+            <div class="pt-4 border-t border-kopi2coffee-deep/30">
+                <a href="https://wa.me/6281234567890?text=Halo%20Kopi%20Tu%2C%20saya%20ingin%20tanya%20mengenai%20menu%20dan%20reservasi" target="_blank" class="w-full justify-center px-6 py-3 rounded-full bg-gradient-to-r from-kopi2coffee-red to-kopi2coffee-deep text-white font-semibold flex items-center gap-2 shadow-lg shadow-black">
                     <i class="fa-brands fa-whatsapp text-lg"></i> Hubungi WhatsApp
                 </a>
             </div>
@@ -114,67 +104,84 @@
     </nav>
 
     <!-- HERO SECTION -->
-    <section id="beranda" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+    <section id="beranda" class="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden bg-gradient-to-b from-kopi2coffee-black via-kopi2coffee-dark to-kopi2coffee-deep/40">
         <!-- Background Overlay Image -->
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?q=80&w=1920&auto=format&fit=crop" class="w-full h-full object-cover opacity-20 filter brightness-50" alt="Lush green botanical background">
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(13,82,44,0.15)_0%,transparent_100%)]"></div>
             <!-- Gradient Overlay for Contrast -->
-            <div class="absolute inset-0 bg-gradient-to-t from-leaf-700 via-leaf-700/80 to-transparent"></div>
-            <div class="absolute inset-0 bg-gradient-to-r from-leaf-700 via-transparent to-leaf-700/80"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-kopi2coffee-dark via-transparent to-kopi2coffee-black"></div>
         </div>
 
-        <!-- Hero Content -->
-        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center mt-12">
-            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-leaf-800/90 border border-leaf-500/40 text-accent-400 font-semibold text-xs uppercase tracking-widest mb-6">
-                <i class="fa-solid fa-seedling text-accent-400"></i> Fresh, Organic & Premium Selection
-            </span>
-            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight leading-none mb-6">
-                Sentuhan Alami,<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 via-accent-500 to-leaf-400">
-                    Cita Rasa Sejati.
-                </span>
-            </h1>
-            <p class="max-w-2xl mx-auto text-leaf-100 text-base md:text-xl font-light leading-relaxed mb-10">
-                Menghidangkan seduhan kopi organik berkualitas tinggi dan hidangan segar bernuansa alam. Setiap sajian diracik khusus untuk memberikan kesegaran pikiran dan kenyamanan hati Anda.
-            </p>
+        <!-- Hero Content (Split Layout for Logo Prominence) -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Side: Copy and Action Buttons -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-kopi2coffee-deep/30 border border-kopi2coffee-deep/60 text-kopi2coffee-light font-semibold text-xs uppercase tracking-widest">
+                        <i class="fa-solid fa-seedling text-kopi2coffee-red"></i> Seduhan Otentik Khas Kopi Tu
+                    </span>
+                    <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-tight">
+                        Cita Rasa Klasik,<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-kopi2coffee-light to-kopi2coffee-red">
+                            Tradisi Sejati.
+                        </span>
+                    </h1>
+                    <p class="max-w-xl mx-auto lg:mx-0 text-stone-300 text-base md:text-lg font-light leading-relaxed">
+                        Menghadirkan kehangatan cita rasa kopi moka pot klasik dan racikan biji kopi terbaik pilihan Nusantara. Setiap cangkir diseduh penuh dedikasi untuk kesempurnaan hari Anda.
+                    </p>
 
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#menu" class="w-full sm:w-auto px-8 py-4 rounded-full bg-accent-500 hover:bg-accent-400 text-leaf-900 font-bold shadow-lg shadow-accent-500/30 transition-all flex items-center justify-center gap-2">
-                    Eksplor Menu <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <a href="#tentang" class="w-full sm:w-auto px-8 py-4 rounded-full bg-leaf-800/80 hover:bg-leaf-600 text-white border border-leaf-500/40 font-semibold transition-all flex items-center justify-center gap-2">
-                    Kisah Kami
-                </a>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#menu" class="w-full sm:w-auto px-8 py-4 rounded-full bg-kopi2coffee-red hover:bg-red-700 text-white font-bold shadow-lg shadow-kopi2coffee-red/20 transition-all flex items-center justify-center gap-2">
+                            Eksplor Menu <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#tentang" class="w-full sm:w-auto px-8 py-4 rounded-full bg-kopi2coffee-deep/20 hover:bg-kopi2coffee-deep/40 text-white border border-kopi2coffee-deep/50 font-semibold transition-all flex items-center justify-center gap-2">
+                            Kisah Kami
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side: Prominent Brand Logo Showcase -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative group">
+                        <!-- Glow effect -->
+                        <div class="absolute -inset-1 rounded-[50px] bg-gradient-to-r from-kopi2coffee-deep to-kopi2coffee-red opacity-30 blur-2xl group-hover:opacity-50 transition-all duration-700"></div>
+                        <div class="relative bg-gradient-to-b from-kopi2coffee-black to-kopi2coffee-dark p-8 rounded-[48px] border border-kopi2coffee-deep/40 shadow-2xl flex items-center justify-center max-w-[320px] md:max-w-[360px] transform group-hover:scale-[1.02] transition-transform duration-500">
+                            <img src="image_a42015.png" class="w-full h-auto object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.8)]" alt="Kopi Tu Official Logo">
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
         <!-- Decorative Bottom Accent -->
         <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
-            <svg class="relative block w-full h-12 text-leaf-700" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <svg class="relative block w-full h-12 text-kopi2coffee-dark" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C26.9,8.75,57.05,18.3,90.3,25.84,171.09,44.17,252.12,62.17,321.39,56.44Z" fill="currentColor"></path>
             </svg>
         </div>
     </section>
 
     <!-- ABOUT SECTION -->
-    <section id="tentang" class="py-24 bg-leaf-700 relative overflow-hidden">
+    <section id="tentang" class="py-24 bg-kopi2coffee-dark relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <!-- Left Column: Botanical Photo Grid -->
                 <div class="relative group">
-                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-accent-500/10 rounded-full blur-3xl"></div>
-                    <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-leaf-500/20 rounded-full blur-3xl"></div>
+                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-kopi2coffee-deep/20 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-kopi2coffee-red/10 rounded-full blur-3xl"></div>
                     
-                    <div class="rounded-3xl overflow-hidden border border-leaf-600/60 shadow-2xl relative aspect-[4/3] sm:aspect-video lg:aspect-square">
-                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover filter brightness-95 group-hover:scale-105 transition-transform duration-700" alt="Beautiful garden cafe interior">
+                    <div class="rounded-3xl overflow-hidden border border-kopi2coffee-deep/40 shadow-2xl relative aspect-[4/3] sm:aspect-video lg:aspect-square bg-kopi2coffee-black">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover filter brightness-75 group-hover:scale-105 transition-transform duration-700" alt="Beautiful garden cafe interior">
                         <!-- Tiny Accent Stats Badge -->
-                        <div class="absolute bottom-6 left-6 p-4 rounded-2xl glass border border-leaf-600/50 shadow-xl flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-xl bg-accent-500 flex items-center justify-center text-leaf-800 text-2xl font-bold">
+                        <div class="absolute bottom-6 left-6 p-4 rounded-2xl glass border border-kopi2coffee-deep/40 shadow-xl flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-kopi2coffee-red flex items-center justify-center text-white text-2xl font-bold">
                                 100%
                             </div>
                             <div>
-                                <h4 class="font-bold text-white text-sm">Alami & Segar</h4>
-                                <p class="text-xs text-leaf-100">Bahan Pilihan Terbaik</p>
+                                <h4 class="font-bold text-white text-sm">Otentik & Segar</h4>
+                                <p class="text-xs text-stone-300">Biji Kopi Pilihan Terbaik</p>
                             </div>
                         </div>
                     </div>
@@ -183,34 +190,34 @@
                 <!-- Right Column: Story Copy -->
                 <div class="space-y-8">
                     <div class="space-y-3">
-                        <span class="text-accent-400 font-bold uppercase tracking-widest text-sm">Sejak Tahun 2018</span>
-                        <h2 class="font-serif text-4xl md:text-5xl font-bold text-white leading-tight">Mendedikasikan Cita Rasa & Keasrian Alam</h2>
+                        <span class="text-kopi2coffee-red font-bold uppercase tracking-widest text-sm">Sejak Tahun 2020</span>
+                        <h2 class="font-serif text-4xl md:text-5xl font-bold text-white leading-tight">Mendedikasikan Cita Rasa Klasik Kopi Tu</h2>
                     </div>
-                    <p class="text-leaf-100 leading-relaxed text-base md:text-lg">
-                        Berawal dari kecintaan kami terhadap harmoni alam dan kenikmatan secangkir minuman hangat, **Java & Co.** hadir dengan konsep bistro botanical yang menyejukkan. Kami mengombinasikan keasrian kebun hijau dengan olahan kopi serta makanan organik berkualitas premium.
+                    <p class="text-stone-300 leading-relaxed text-base md:text-lg">
+                        Terinspirasi dari keindahan tradisi seduh moka pot yang legendaris, **Kopi Tu** hadir membawa kesederhanaan rasa yang berkarakter kuat. Kami memadukan kehangatan ruang sosial bernuansa hijau alami dengan kopi berkualitas premium.
                     </p>
-                    <p class="text-leaf-200 leading-relaxed">
-                        Kami menjalin kerja sama erat dengan petani tanaman obat, pembuat matcha organik Jepang, dan petani kopi Nusantara. Setiap daun teh, rempah-rempah, dan biji kopi dipilah secara manual untuk menghadirkan kualitas terbaik langsung ke meja Anda.
+                    <p class="text-stone-400 leading-relaxed">
+                        Kami menjalin kemitraan erat dengan petani kopi lokal Nusantara untuk mendatangkan biji kopi mentah pilihan terbaik. Setiap proses pemanggangan hingga penyajian di meja Anda diawasi secara presisi guna mempertahankan orisinalitas aroma dan rasa sejati yang kaya.
                     </p>
                     
                     <!-- Core Value Badges -->
-                    <div class="grid grid-cols-2 gap-6 pt-4 border-t border-leaf-600/60">
+                    <div class="grid grid-cols-2 gap-6 pt-4 border-t border-kopi2coffee-deep/30">
                         <div class="flex gap-4">
-                            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-leaf-800 border border-leaf-600 flex items-center justify-center text-accent-400 text-lg">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-kopi2coffee-black border border-kopi2coffee-deep flex items-center justify-center text-kopi2coffee-red text-lg">
                                 <i class="fa-solid fa-leaf"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-white text-sm">Bahan Organik</h4>
-                                <p class="text-xs text-leaf-200">Tanpa bahan pengawet sintesis.</p>
+                                <h4 class="font-bold text-white text-sm">Organik Alami</h4>
+                                <p class="text-xs text-stone-400">Tanpa bahan tambahan buatan.</p>
                             </div>
                         </div>
                         <div class="flex gap-4">
-                            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-leaf-800 border border-leaf-600 flex items-center justify-center text-accent-400 text-lg">
-                                <i class="fa-solid fa-seedling"></i>
+                            <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-kopi2coffee-black border border-kopi2coffee-deep flex items-center justify-center text-kopi2coffee-red text-lg">
+                                <i class="fa-solid fa-mug-hot"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-white text-sm">Eco-Friendly</h4>
-                                <p class="text-xs text-leaf-200">Komitmen pengurangan plastik sekali pakai.</p>
+                                <h4 class="font-bold text-white text-sm">Metode Klasik</h4>
+                                <p class="text-xs text-stone-400">Seduhan moka pot & manual presisi.</p>
                             </div>
                         </div>
                     </div>
@@ -220,31 +227,31 @@
     </section>
 
     <!-- MENU CATALOGUE SECTION -->
-    <section id="menu" class="py-24 bg-leaf-800 border-y border-leaf-900">
+    <section id="menu" class="py-24 bg-kopi2coffee-black border-y border-kopi2coffee-deep/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
-                <span class="text-accent-400 font-bold uppercase tracking-widest text-sm">Segar Dari Barista & Dapur</span>
+                <span class="text-kopi2coffee-red font-bold uppercase tracking-widest text-sm">Menu Istimewa Kopi Tu</span>
                 <h2 class="font-serif text-4xl md:text-5xl font-bold text-white">Eksplorasi Katalog Menu Kami</h2>
-                <p class="text-leaf-200">
-                    Dari racikan kopi hitam yang kuat hingga segarnya racikan herbal alami dan makanan sehat yang menenangkan suasana hati Anda.
+                <p class="text-stone-300">
+                    Dari racikan kopi moka pot klasik yang kuat hingga segarnya minuman non-kopi pilihan yang menyejukkan suasana berkumpul Anda.
                 </p>
             </div>
 
             <!-- Categories Dynamic Filter Tab -->
             <div class="flex flex-wrap justify-center gap-2 mb-12">
-                <button onclick="filterMenu('all')" id="btn-all" class="category-btn active px-6 py-2.5 rounded-full bg-accent-500 text-leaf-950 font-bold text-sm transition-all shadow-md shadow-accent-500/20">
+                <button onclick="filterMenu('all')" id="btn-all" class="category-btn active px-6 py-2.5 rounded-full bg-kopi2coffee-red text-white font-bold text-sm transition-all shadow-md">
                     Semua Menu
                 </button>
-                <button onclick="filterMenu('coffee')" id="btn-coffee" class="category-btn px-6 py-2.5 rounded-full bg-leaf-700 hover:bg-leaf-600/80 text-leaf-100 font-medium text-sm border border-leaf-600/60 transition-all">
-                    Espresso-Based
+                <button onclick="filterMenu('coffee')" id="btn-coffee" class="category-btn px-6 py-2.5 rounded-full bg-kopi2coffee-deep/20 hover:bg-kopi2coffee-deep/40 text-stone-200 font-medium text-sm border border-kopi2coffee-deep/40 transition-all">
+                    Moka Pot Classics
                 </button>
-                <button onclick="filterMenu('signature')" id="btn-signature" class="category-btn px-6 py-2.5 rounded-full bg-leaf-700 hover:bg-leaf-600/80 text-leaf-100 font-medium text-sm border border-leaf-600/60 transition-all">
+                <button onclick="filterMenu('signature')" id="btn-signature" class="category-btn px-6 py-2.5 rounded-full bg-kopi2coffee-deep/20 hover:bg-kopi2coffee-deep/40 text-stone-200 font-medium text-sm border border-kopi2coffee-deep/40 transition-all">
                     Signature Blend
                 </button>
-                <button onclick="filterMenu('non-coffee')" id="btn-non-coffee" class="category-btn px-6 py-2.5 rounded-full bg-leaf-700 hover:bg-leaf-600/80 text-leaf-100 font-medium text-sm border border-leaf-600/60 transition-all">
-                    Non-Coffee / Matcha
+                <button onclick="filterMenu('non-coffee')" id="btn-non-coffee" class="category-btn px-6 py-2.5 rounded-full bg-kopi2coffee-deep/20 hover:bg-kopi2coffee-deep/40 text-stone-200 font-medium text-sm border border-kopi2coffee-deep/40 transition-all">
+                    Non-Coffee
                 </button>
-                <button onclick="filterMenu('pastry')" id="btn-pastry" class="category-btn px-6 py-2.5 rounded-full bg-leaf-700 hover:bg-leaf-600/80 text-leaf-100 font-medium text-sm border border-leaf-600/60 transition-all">
+                <button onclick="filterMenu('pastry')" id="btn-pastry" class="category-btn px-6 py-2.5 rounded-full bg-kopi2coffee-deep/20 hover:bg-kopi2coffee-deep/40 text-stone-200 font-medium text-sm border border-kopi2coffee-deep/40 transition-all">
                     Makanan & Pastry
                 </button>
             </div>
@@ -253,24 +260,24 @@
             <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <!-- Menu Item 1: Espresso Based -->
-                <div class="menu-card bg-leaf-700 rounded-3xl overflow-hidden border border-leaf-600/40 shadow-lg flex flex-col h-full" data-category="coffee">
+                <div class="menu-card bg-kopi2coffee-dark rounded-3xl overflow-hidden border border-kopi2coffee-deep/30 shadow-lg flex flex-col h-full" data-category="coffee">
                     <div class="relative overflow-hidden aspect-[4/3]">
                         <img src="https://images.unsplash.com/photo-151097252790b-af4f42dfb67f?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="Espresso / Latte">
-                        <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-leaf-900/90 text-accent-400 text-xs font-bold border border-leaf-600/60">Hot / Ice</span>
+                        <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-kopi2coffee-black/90 text-kopi2coffee-red text-xs font-bold border border-kopi2coffee-deep/30">Hot / Ice</span>
                     </div>
                     <div class="p-6 flex flex-col flex-grow justify-between">
                         <div class="space-y-2">
                             <div class="flex justify-between items-start gap-4">
-                                <h3 class="font-serif text-xl font-bold text-white">Classic Cafe Latte</h3>
-                                <span class="text-accent-400 font-bold whitespace-nowrap">Rp 28.000</span>
+                                <h3 class="font-serif text-xl font-bold text-white">Classic Moka Latte</h3>
+                                <span class="text-kopi2coffee-red font-bold whitespace-nowrap">Rp 28.000</span>
                             </div>
-                            <p class="text-leaf-200 text-sm leading-relaxed">
-                                Espresso kaya rasa dengan steam milk lembut dan sentuhan latte art cantik buatan barista andalan kami.
+                            <p class="text-stone-300 text-sm leading-relaxed">
+                                Espresso pekat hasil ekstraksi moka pot dengan susu steam lembut dan foam tipis yang manis alami.
                             </p>
                         </div>
-                        <div class="pt-6 border-t border-leaf-600/40 mt-4 flex items-center justify-between">
-                            <span class="text-xs text-leaf-300 font-medium"><i class="fa-solid fa-mug-hot mr-1"></i> Espresso Based</span>
-                            <a href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20pesan%20Classic%20Cafe%20Latte" target="_blank" class="px-4 py-1.5 rounded-full bg-leaf-800 hover:bg-accent-500 text-white hover:text-leaf-950 text-xs font-semibold border border-leaf-600 hover:border-accent-400 transition-all flex items-center gap-1.5">
+                        <div class="pt-6 border-t border-kopi2coffee-deep/20 mt-4 flex items-center justify-between">
+                            <span class="text-xs text-stone-400 font-medium"><i class="fa-solid fa-mug-hot mr-1"></i> Moka Pot Classic</span>
+                            <a href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20pesan%20Classic%20Moka%20Latte" target="_blank" class="px-4 py-1.5 rounded-full bg-kopi2coffee-black hover:bg-kopi2coffee-red text-white text-xs font-semibold border border-kopi2coffee-deep transition-all flex items-center gap-1.5">
                                 <i class="fa-brands fa-whatsapp text-sm"></i> Order
                             </a>
                         </div>
@@ -278,24 +285,24 @@
                 </div>
 
                 <!-- Menu Item 2: Signature Ice Blend -->
-                <div class="menu-card bg-leaf-700 rounded-3xl overflow-hidden border border-leaf-600/40 shadow-lg flex flex-col h-full" data-category="signature">
+                <div class="menu-card bg-kopi2coffee-dark rounded-3xl overflow-hidden border border-kopi2coffee-deep/30 shadow-lg flex flex-col h-full" data-category="signature">
                     <div class="relative overflow-hidden aspect-[4/3]">
                         <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="Toffee Caramel Mocha">
-                        <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-accent-500 text-leaf-900 text-xs font-bold shadow-md">Best Seller</span>
+                        <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-kopi2coffee-red text-white text-xs font-bold shadow-md">Best Seller</span>
                     </div>
                     <div class="p-6 flex flex-col flex-grow justify-between">
                         <div class="space-y-2">
                             <div class="flex justify-between items-start gap-4">
-                                <h3 class="font-serif text-xl font-bold text-white">Toffee Caramel Mocha</h3>
-                                <span class="text-accent-400 font-bold whitespace-nowrap">Rp 35.000</span>
+                                <h3 class="font-serif text-xl font-bold text-white">Tu Signature Mocha</h3>
+                                <span class="text-kopi2coffee-red font-bold whitespace-nowrap">Rp 35.000</span>
                             </div>
-                            <p class="text-leaf-200 text-sm leading-relaxed">
-                                Paduan espresso istimewa, sirup toffee premium, saus cokelat, es krim vanilla, dan whipped cream lembut di atasnya.
+                            <p class="text-stone-300 text-sm leading-relaxed">
+                                Racikan istimewa espresso moka pot, cokelat premium, saus karamel khas Kopi Tu, dan es krim vanilla lembut.
                             </p>
                         </div>
-                        <div class="pt-6 border-t border-leaf-600/40 mt-4 flex items-center justify-between">
-                            <span class="text-xs text-leaf-300 font-medium"><i class="fa-solid fa-star mr-1"></i> Signature Coffee</span>
-                            <a href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20pesan%20Toffee%20Caramel%20Mocha" target="_blank" class="px-4 py-1.5 rounded-full bg-leaf-800 hover:bg-accent-500 text-white hover:text-leaf-950 text-xs font-semibold border border-leaf-600 hover:border-accent-400 transition-all flex items-center gap-1.5">
+                        <div class="pt-6 border-t border-kopi2coffee-deep/20 mt-4 flex items-center justify-between">
+                            <span class="text-xs text-stone-400 font-medium"><i class="fa-solid fa-star mr-1"></i> Signature Blend</span>
+                            <a href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20pesan%20Tu%20Signature%20Mocha" target="_blank" class="px-4 py-1.5 rounded-full bg-kopi2coffee-black hover:bg-kopi2coffee-red text-white text-xs font-semibold border border-kopi2coffee-deep transition-all flex items-center gap-1.5">
                                 <i class="fa-brands fa-whatsapp text-sm"></i> Order
                             </a>
                         </div>
@@ -303,24 +310,24 @@
                 </div>
 
                 <!-- Menu Item 3: Coffee - Espresso Based -->
-                <div class="menu-card bg-leaf-700 rounded-3xl overflow-hidden border border-leaf-600/40 shadow-lg flex flex-col h-full" data-category="coffee">
+                <div class="menu-card bg-kopi2coffee-dark rounded-3xl overflow-hidden border border-kopi2coffee-deep/30 shadow-lg flex flex-col h-full" data-category="coffee">
                     <div class="relative overflow-hidden aspect-[4/3]">
                         <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="Americano">
-                        <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-leaf-900/90 text-accent-400 text-xs font-bold border border-leaf-600/40">Hot / Ice</span>
+                        <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-kopi2coffee-black/90 text-kopi2coffee-red text-xs font-bold border border-kopi2coffee-deep/30">Hot / Ice</span>
                     </div>
                     <div class="p-6 flex flex-col flex-grow justify-between">
                         <div class="space-y-2">
                             <div class="flex justify-between items-start gap-4">
-                                <h3 class="font-serif text-xl font-bold text-white">Americano Gayo</h3>
-                                <span class="text-accent-400 font-bold whitespace-nowrap">Rp 22.000</span>
+                                <h3 class="font-serif text-xl font-bold text-white">Espresso Kopi Tu</h3>
+                                <span class="text-kopi2coffee-red font-bold whitespace-nowrap">Rp 22.000</span>
                             </div>
-                            <p class="text-leaf-200 text-sm leading-relaxed">
-                                Menggunakan biji arabika Gayo pilihan yang diseduh presisi, menghasilkan notes dark chocolate yang kental dan acidity yang seimbang.
+                            <p class="text-stone-300 text-sm leading-relaxed">
+                                Seduhan murni tanpa ampas dengan moka pot tradisional, menghasilkan rasa yang kental, pekat, dan aroma super harum.
                             </p>
                         </div>
-                        <div class="pt-6 border-t border-leaf-600/40 mt-4 flex items-center justify-between">
-                            <span class="text-xs text-leaf-300 font-medium"><i class="fa-solid fa-mug-hot mr-1"></i> Espresso Based</span>
-                            <a href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20pesan%20Americano%20Gayo" target="_blank" class="px-4 py-1.5 rounded-full bg-leaf-800 hover:bg-accent-500 text-white hover:text-leaf-950 text-xs font-semibold border border-leaf-600 hover:border-accent-400 transition-all flex items-center gap-1.5">
+                        <div class="pt-6 border-t border-kopi2coffee-deep/20 mt-4 flex items-center justify-between">
+                            <span class="text-xs text-stone-400 font-medium"><i class="fa-solid fa-mug-hot mr-1"></i> Moka Pot Classic</span>
+                            <a href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20pesan%20Espresso%20Kopi%20Tu" target="_blank" class="px-4 py-1.5 rounded-full bg-kopi2coffee-black hover:bg-kopi2coffee-red text-white text-xs font-semibold border border-kopi2coffee-deep transition-all flex items-center gap-1.5">
                                 <i class="fa-brands fa-whatsapp text-sm"></i> Order
                             </a>
                         </div>
@@ -328,24 +335,24 @@
                 </div>
 
                 <!-- Menu Item 4: Non-Coffee -->
-                <div class="menu-card bg-leaf-700 rounded-3xl overflow-hidden border border-leaf-600/40 shadow-lg flex flex-col h-full" data-category="non-coffee">
+                <div class="menu-card bg-kopi2coffee-dark rounded-3xl overflow-hidden border border-kopi2coffee-deep/30 shadow-lg flex flex-col h-full" data-category="non-coffee">
                     <div class="relative overflow-hidden aspect-[4/3]">
                         <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="Premium Matcha Latte">
-                        <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-leaf-900/90 text-accent-400 text-xs font-bold border border-leaf-600/40">Hot / Ice</span>
+                        <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-kopi2coffee-black/90 text-kopi2coffee-red text-xs font-bold border border-kopi2coffee-deep/30">Hot / Ice</span>
                     </div>
                     <div class="p-6 flex flex-col flex-grow justify-between">
                         <div class="space-y-2">
                             <div class="flex justify-between items-start gap-4">
-                                <h3 class="font-serif text-xl font-bold text-white">Premium Matcha Uji</h3>
-                                <span class="text-accent-400 font-bold whitespace-nowrap">Rp 30.000</span>
+                                <h3 class="font-serif text-xl font-bold text-white">Pure Matcha Green</h3>
+                                <span class="text-kopi2coffee-red font-bold whitespace-nowrap">Rp 30.000</span>
                             </div>
-                            <p class="text-leaf-200 text-sm leading-relaxed">
-                                Teh hijau bubuk organik berkualitas super asli dari Kyoto Jepang, diseduh dengan susu segar menghasilkan cita rasa creamy dan manis pahit yang pas.
+                            <p class="text-stone-300 text-sm leading-relaxed">
+                                Teh hijau matcha murni berkualitas organik tinggi, menghasilkan harmoni rasa manis-pahit yang segar serta menenangkan.
                             </p>
                         </div>
-                        <div class="pt-6 border-t border-leaf-600/40 mt-4 flex items-center justify-between">
-                            <span class="text-xs text-leaf-300 font-medium"><i class="fa-solid fa-leaf mr-1"></i> Non-Coffee</span>
-                            <a href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20pesan%20Premium%20Matcha%20Uji" target="_blank" class="px-4 py-1.5 rounded-full bg-leaf-800 hover:bg-accent-500 text-white hover:text-leaf-950 text-xs font-semibold border border-leaf-600 hover:border-accent-400 transition-all flex items-center gap-1.5">
+                        <div class="pt-6 border-t border-kopi2coffee-deep/20 mt-4 flex items-center justify-between">
+                            <span class="text-xs text-stone-400 font-medium"><i class="fa-solid fa-leaf mr-1"></i> Non-Coffee</span>
+                            <a href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20pesan%20Pure%20Matcha%20Green" target="_blank" class="px-4 py-1.5 rounded-full bg-kopi2coffee-black hover:bg-kopi2coffee-red text-white text-xs font-semibold border border-kopi2coffee-deep transition-all flex items-center gap-1.5">
                                 <i class="fa-brands fa-whatsapp text-sm"></i> Order
                             </a>
                         </div>
@@ -353,24 +360,24 @@
                 </div>
 
                 <!-- Menu Item 5: Pastry & Food -->
-                <div class="menu-card bg-leaf-700 rounded-3xl overflow-hidden border border-leaf-600/40 shadow-lg flex flex-col h-full" data-category="pastry">
+                <div class="menu-card bg-kopi2coffee-dark rounded-3xl overflow-hidden border border-kopi2coffee-deep/30 shadow-lg flex flex-col h-full" data-category="pastry">
                     <div class="relative overflow-hidden aspect-[4/3]">
                         <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="Butter Croissant">
-                        <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-accent-500 text-leaf-900 text-xs font-bold shadow-md">Freshly Baked</span>
+                        <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-kopi2coffee-red text-white text-xs font-bold shadow-md">Fresh</span>
                     </div>
                     <div class="p-6 flex flex-col flex-grow justify-between">
                         <div class="space-y-2">
                             <div class="flex justify-between items-start gap-4">
-                                <h3 class="font-serif text-xl font-bold text-white">Butter Croissant</h3>
-                                <span class="text-accent-400 font-bold whitespace-nowrap">Rp 24.000</span>
+                                <h3 class="font-serif text-xl font-bold text-white">Classic Butter Croissant</h3>
+                                <span class="text-kopi2coffee-red font-bold whitespace-nowrap">Rp 24.000</span>
                             </div>
-                            <p class="text-leaf-200 text-sm leading-relaxed">
-                                Croissant legendaris dengan renyahnya lapisan luar berlapis mentega gurih, sangat nikmat ketika disantap bersama secangkir Espresso hangat.
+                            <p class="text-stone-300 text-sm leading-relaxed">
+                                Pastry croissant renyah bermentega gurih khas Prancis, pasangan sempurna saat menikmati secangkir kopi moka hangat.
                             </p>
                         </div>
-                        <div class="pt-6 border-t border-leaf-600/40 mt-4 flex items-center justify-between">
-                            <span class="text-xs text-leaf-300 font-medium"><i class="fa-solid fa-cookie-bite mr-1"></i> Bakery & Pastry</span>
-                            <a href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20pesan%20Butter%20Croissant" target="_blank" class="px-4 py-1.5 rounded-full bg-leaf-800 hover:bg-accent-500 text-white hover:text-leaf-950 text-xs font-semibold border border-leaf-600 hover:border-accent-400 transition-all flex items-center gap-1.5">
+                        <div class="pt-6 border-t border-kopi2coffee-deep/20 mt-4 flex items-center justify-between">
+                            <span class="text-xs text-stone-400 font-medium"><i class="fa-solid fa-cookie-bite mr-1"></i> Bakery & Pastry</span>
+                            <a href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20pesan%20Classic%20Butter%20Croissant" target="_blank" class="px-4 py-1.5 rounded-full bg-kopi2coffee-black hover:bg-kopi2coffee-red text-white text-xs font-semibold border border-kopi2coffee-deep transition-all flex items-center gap-1.5">
                                 <i class="fa-brands fa-whatsapp text-sm"></i> Order
                             </a>
                         </div>
@@ -378,24 +385,24 @@
                 </div>
 
                 <!-- Menu Item 6: Signature non-coffee blend -->
-                <div class="menu-card bg-leaf-700 rounded-3xl overflow-hidden border border-leaf-600/40 shadow-lg flex flex-col h-full" data-category="signature">
+                <div class="menu-card bg-kopi2coffee-dark rounded-3xl overflow-hidden border border-kopi2coffee-deep/30 shadow-lg flex flex-col h-full" data-category="signature">
                     <div class="relative overflow-hidden aspect-[4/3]">
                         <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="Iced Hazelnut Frappe">
-                        <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-leaf-900/90 text-accent-400 text-xs font-bold border border-leaf-600/40">Ice Only</span>
+                        <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-kopi2coffee-black/90 text-kopi2coffee-red text-xs font-bold border border-kopi2coffee-deep/30">Ice Only</span>
                     </div>
                     <div class="p-6 flex flex-col flex-grow justify-between">
                         <div class="space-y-2">
                             <div class="flex justify-between items-start gap-4">
-                                <h3 class="font-serif text-xl font-bold text-white">Hazelnut Choco Frappe</h3>
-                                <span class="text-accent-400 font-bold whitespace-nowrap">Rp 32.000</span>
+                                <h3 class="font-serif text-xl font-bold text-white">Hazelnut Velvet</h3>
+                                <span class="text-kopi2coffee-red font-bold whitespace-nowrap">Rp 32.000</span>
                             </div>
-                            <p class="text-leaf-200 text-sm leading-relaxed">
-                                Perpaduan bubuk cokelat premium dan saus kacang hazelnut manis yang diblender gurih dengan es batu, disajikan lengkap bersama parutan cokelat Belgia.
+                            <p class="text-stone-300 text-sm leading-relaxed">
+                                Minuman cokelat belgian pekat diblender halus dengan sirup manis hazelnut dan disajikan bersama limpahan whipping cream.
                             </p>
                         </div>
-                        <div class="pt-6 border-t border-leaf-600/40 mt-4 flex items-center justify-between">
-                            <span class="text-xs text-leaf-300 font-medium"><i class="fa-solid fa-star mr-1"></i> Signature Non-Coffee</span>
-                            <a href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20pesan%20Hazelnut%20Choco%20Frappe" target="_blank" class="px-4 py-1.5 rounded-full bg-leaf-800 hover:bg-accent-500 text-white hover:text-leaf-950 text-xs font-semibold border border-leaf-600 hover:border-accent-400 transition-all flex items-center gap-1.5">
+                        <div class="pt-6 border-t border-kopi2coffee-deep/20 mt-4 flex items-center justify-between">
+                            <span class="text-xs text-stone-400 font-medium"><i class="fa-solid fa-star mr-1"></i> Signature Non-Coffee</span>
+                            <a href="https://wa.me/6281234567890?text=Halo%20saya%20mau%20pesan%20Hazelnut%20Velvet" target="_blank" class="px-4 py-1.5 rounded-full bg-kopi2coffee-black hover:bg-kopi2coffee-red text-white text-xs font-semibold border border-kopi2coffee-deep transition-all flex items-center gap-1.5">
                                 <i class="fa-brands fa-whatsapp text-sm"></i> Order
                             </a>
                         </div>
@@ -407,94 +414,94 @@
     </section>
 
     <!-- TESTIMONIALS SECTION -->
-    <section class="py-24 bg-leaf-700 relative overflow-hidden">
+    <section class="py-24 bg-kopi2coffee-dark relative overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <div class="absolute -top-12 -left-12 w-64 h-64 bg-accent-500/5 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-12 right-12 w-80 h-80 bg-leaf-900/10 rounded-full blur-3xl"></div>
+            <div class="absolute -top-12 -left-12 w-64 h-64 bg-kopi2coffee-deep/10 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-12 right-12 w-80 h-80 bg-kopi2coffee-black/20 rounded-full blur-3xl"></div>
         </div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
-                <span class="text-accent-400 font-bold uppercase tracking-widest text-sm">Ulasan Pelanggan</span>
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-white">Apa Kata Pecinta Kopi & Alam?</h2>
+                <span class="text-kopi2coffee-red font-bold uppercase tracking-widest text-sm">Testimoni Pengunjung</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-white">Apa Kata Sahabat Kopi Tu?</h2>
             </div>
 
             <!-- Testimonials Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Card 1 -->
-                <div class="p-8 rounded-3xl bg-leaf-800/60 border border-leaf-600/50 shadow-lg relative flex flex-col justify-between">
-                    <span class="absolute top-6 right-8 text-6xl font-serif text-accent-500/10 select-none">“</span>
+                <div class="p-8 rounded-3xl bg-kopi2coffee-black/60 border border-kopi2coffee-deep/30 shadow-lg relative flex flex-col justify-between">
+                    <span class="absolute top-6 right-8 text-6xl font-serif text-kopi2coffee-deep/20 select-none">“</span>
                     <div class="space-y-4 relative z-10">
-                        <div class="flex text-amber-500 gap-1">
+                        <div class="flex text-kopi2coffee-red gap-1">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                         </div>
-                        <p class="text-leaf-100 text-sm leading-relaxed">
-                            "Matcha Uji di sini terasa sangat autentik! Ditambah dengan suasana kafe yang dipenuhi tanaman rindang, nugas berjam-jam jadi terasa sangat rileks dan damai."
+                        <p class="text-stone-300 text-sm leading-relaxed">
+                            "Seduhan moka pot di Kopi Tu ini sangat mantap! Aromanya kuat dan tidak terlalu pahit gosong. Sangat jarang menemukan tempat ngopi klasik seindah ini."
                         </p>
                     </div>
-                    <div class="flex items-center gap-4 mt-8 pt-6 border-t border-leaf-600/40">
-                        <div class="w-10 h-10 rounded-full bg-accent-500 flex items-center justify-center text-leaf-900 font-bold text-sm">
+                    <div class="flex items-center gap-4 mt-8 pt-6 border-t border-kopi2coffee-deep/20">
+                        <div class="w-10 h-10 rounded-full bg-kopi2coffee-red flex items-center justify-center text-white font-bold text-sm">
                             RD
                         </div>
                         <div>
                             <h4 class="font-bold text-white text-sm">Rian Dewantara</h4>
-                            <p class="text-xs text-leaf-300">Matcha Lover</p>
+                            <p class="text-xs text-stone-400">Pecinta Manual Brew</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 2 -->
-                <div class="p-8 rounded-3xl bg-leaf-800/60 border border-leaf-600/50 shadow-lg relative flex flex-col justify-between">
-                    <span class="absolute top-6 right-8 text-6xl font-serif text-accent-500/10 select-none">“</span>
+                <div class="p-8 rounded-3xl bg-kopi2coffee-black/60 border border-kopi2coffee-deep/30 shadow-lg relative flex flex-col justify-between">
+                    <span class="absolute top-6 right-8 text-6xl font-serif text-kopi2coffee-deep/20 select-none">“</span>
                     <div class="space-y-4 relative z-10">
-                        <div class="flex text-amber-500 gap-1">
+                        <div class="flex text-kopi2coffee-red gap-1">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                         </div>
-                        <p class="text-leaf-100 text-sm leading-relaxed">
-                            "Biji kopi Gayo-nya segar sekali! Sangat jarang ada kafe yang menyajikan Americano dengan acidity sehalus dan senikmat ini. Croissant-nya juga luar biasa buttery."
+                        <p class="text-stone-300 text-sm leading-relaxed">
+                            "Desain logo barunya sangat berkelas, sangat mewakili rasa otentik kopi moka pot-nya yang berkualitas! Tempatnya rimbun, adem dan pelayanannya super ramah."
                         </p>
                     </div>
-                    <div class="flex items-center gap-4 mt-8 pt-6 border-t border-leaf-600/40">
-                        <div class="w-10 h-10 rounded-full bg-accent-500 flex items-center justify-center text-leaf-900 font-bold text-sm">
+                    <div class="flex items-center gap-4 mt-8 pt-6 border-t border-kopi2coffee-deep/20">
+                        <div class="w-10 h-10 rounded-full bg-kopi2coffee-red flex items-center justify-center text-white font-bold text-sm">
                             AM
                         </div>
                         <div>
                             <h4 class="font-bold text-white text-sm">Amelia Margaretha</h4>
-                            <p class="text-xs text-leaf-300">Food Blogger</p>
+                            <p class="text-xs text-stone-400">Coffee Blogger</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 3 -->
-                <div class="p-8 rounded-3xl bg-leaf-800/60 border border-leaf-600/50 shadow-lg relative flex flex-col justify-between">
-                    <span class="absolute top-6 right-8 text-6xl font-serif text-accent-500/10 select-none">“</span>
+                <div class="p-8 rounded-3xl bg-kopi2coffee-black/60 border border-kopi2coffee-deep/30 shadow-lg relative flex flex-col justify-between">
+                    <span class="absolute top-6 right-8 text-6xl font-serif text-kopi2coffee-deep/20 select-none">“</span>
                     <div class="space-y-4 relative z-10">
-                        <div class="flex text-amber-500 gap-1">
+                        <div class="flex text-kopi2coffee-red gap-1">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
                         </div>
-                        <p class="text-leaf-100 text-sm leading-relaxed">
-                            "Pelayanan barista-nya ramah sekali, mereka bahkan mau merekomendasikan profil kopi sesuai dengan selera saya yang tidak terlalu kuat kopi. Highly recommended!"
+                        <p class="text-stone-300 text-sm leading-relaxed">
+                            "Sangat merekomendasikan Tu Signature Mocha dan Butter Croissant hangat mereka. Menikmatinya di area outdoor yang hijau sungguh menenangkan jiwa."
                         </p>
                     </div>
-                    <div class="flex items-center gap-4 mt-8 pt-6 border-t border-leaf-600/40">
-                        <div class="w-10 h-10 rounded-full bg-accent-500 flex items-center justify-center text-leaf-900 font-bold text-sm">
+                    <div class="flex items-center gap-4 mt-8 pt-6 border-t border-kopi2coffee-deep/20">
+                        <div class="w-10 h-10 rounded-full bg-kopi2coffee-red flex items-center justify-center text-white font-bold text-sm">
                             BP
                         </div>
                         <div>
                             <h4 class="font-bold text-white text-sm">Bambang Pratama</h4>
-                            <p class="text-xs text-leaf-300">Pelanggan Tetap</p>
+                            <p class="text-xs text-stone-400">Pelanggan Tetap</p>
                         </div>
                     </div>
                 </div>
@@ -503,29 +510,29 @@
     </section>
 
     <!-- CONTACT & INFO SECTION -->
-    <section id="kontak" class="py-24 bg-leaf-800 border-t border-leaf-900">
+    <section id="kontak" class="py-24 bg-kopi2coffee-black border-t border-kopi2coffee-deep/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
                 
                 <!-- Column Left: Contact Details & Info (7 Cols) -->
                 <div class="lg:col-span-7 space-y-10">
                     <div class="space-y-4">
-                        <span class="text-accent-400 font-bold uppercase tracking-widest text-sm">Kunjungi Bistro Kami</span>
-                        <h2 class="font-serif text-4xl md:text-5xl font-bold text-white leading-tight">Mari Bersantai & Ngopi Bareng</h2>
-                        <p class="text-leaf-200 max-w-lg">
-                            Punya pertanyaan seputar reservasi rombongan atau event privat? Jangan ragu untuk hubungi kami langsung lewat media apapun di bawah ini.
+                        <span class="text-kopi2coffee-red font-bold uppercase tracking-widest text-sm">Kunjungi Kedai Kopi Tu</span>
+                        <h2 class="font-serif text-4xl md:text-5xl font-bold text-white leading-tight">Mari Bersantai & Nikmati Seduhan Otentik</h2>
+                        <p class="text-stone-300 max-w-lg">
+                            Punya pertanyaan seputar ketersediaan biji kopi khusus, booking ruang komunitas, atau kolaborasi? Hubungi tim Kopi Tu dengan senang hati.
                         </p>
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <!-- Contact Detail 1 -->
                         <div class="flex gap-4">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-leaf-700 border border-leaf-600/50 flex items-center justify-center text-accent-400 text-xl">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-kopi2coffee-dark border border-kopi2coffee-deep/30 flex items-center justify-center text-kopi2coffee-red text-xl">
                                 <i class="fa-solid fa-location-dot"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-white text-base">Alamat Bistro</h4>
-                                <p class="text-leaf-200 text-sm leading-relaxed mt-1">
+                                <h4 class="font-bold text-white text-base">Alamat Kedai</h4>
+                                <p class="text-stone-300 text-sm leading-relaxed mt-1">
                                     Jl. Kopi Senja No. 42, Kebayoran Baru, Jakarta Selatan, 12130.
                                 </p>
                             </div>
@@ -533,12 +540,12 @@
 
                         <!-- Contact Detail 2 -->
                         <div class="flex gap-4">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-leaf-700 border border-leaf-600/50 flex items-center justify-center text-accent-400 text-xl">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-kopi2coffee-dark border border-kopi2coffee-deep/30 flex items-center justify-center text-kopi2coffee-red text-xl">
                                 <i class="fa-solid fa-clock"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-white text-base">Jam Operasional</h4>
-                                <p class="text-leaf-200 text-sm leading-relaxed mt-1">
+                                <h4 class="font-bold text-white text-base">Jam Buka</h4>
+                                <p class="text-stone-300 text-sm leading-relaxed mt-1">
                                     Setiap Hari: 08.00 WIB - 23.00 WIB
                                 </p>
                             </div>
@@ -546,12 +553,12 @@
 
                         <!-- Contact Detail 3 -->
                         <div class="flex gap-4">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-leaf-700 border border-leaf-600/50 flex items-center justify-center text-accent-400 text-xl">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-kopi2coffee-dark border border-kopi2coffee-deep/30 flex items-center justify-center text-kopi2coffee-red text-xl">
                                 <i class="fa-solid fa-phone"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-white text-base">Telepon / WhatsApp</h4>
-                                <p class="text-leaf-200 text-sm leading-relaxed mt-1">
+                                <h4 class="font-bold text-white text-base">Telepon & WhatsApp</h4>
+                                <p class="text-stone-300 text-sm leading-relaxed mt-1">
                                     +62 812-3456-7890
                                 </p>
                             </div>
@@ -559,13 +566,13 @@
 
                         <!-- Contact Detail 4 -->
                         <div class="flex gap-4">
-                            <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-leaf-700 border border-leaf-600/50 flex items-center justify-center text-accent-400 text-xl">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-kopi2coffee-dark border border-kopi2coffee-deep/30 flex items-center justify-center text-kopi2coffee-red text-xl">
                                 <i class="fa-solid fa-envelope"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-white text-base">Email</h4>
-                                <p class="text-leaf-200 text-sm leading-relaxed mt-1">
-                                    hello@javacoffee.co.id
+                                <h4 class="font-bold text-white text-base">Email Resmi</h4>
+                                <p class="text-stone-300 text-sm leading-relaxed mt-1">
+                                    hello@kopi2coffee.co.id
                                 </p>
                             </div>
                         </div>
@@ -574,26 +581,26 @@
 
                 <!-- Column Right: Elegant Custom Contact Form (5 Cols) -->
                 <div class="lg:col-span-5">
-                    <div class="p-8 sm:p-10 rounded-3xl bg-leaf-700 border border-leaf-600/50 shadow-2xl space-y-6 relative overflow-hidden">
-                        <div class="absolute -top-12 -right-12 w-32 h-32 bg-accent-500/10 rounded-full blur-2xl"></div>
+                    <div class="p-8 sm:p-10 rounded-3xl bg-kopi2coffee-dark border border-kopi2coffee-deep/30 shadow-2xl space-y-6 relative overflow-hidden">
+                        <div class="absolute -top-12 -right-12 w-32 h-32 bg-kopi2coffee-deep/10 rounded-full blur-2xl"></div>
                         
                         <h3 class="font-serif text-2xl font-bold text-white">Kirim Pesan Cepat</h3>
                         
                         <form id="contact-form" class="space-y-4" onsubmit="event.preventDefault(); handleFormSubmit();">
                             <div>
-                                <label for="form-name" class="block text-xs font-bold text-leaf-200 uppercase tracking-wider mb-2">Nama Lengkap</label>
-                                <input type="text" id="form-name" required class="w-full px-4 py-3 rounded-xl bg-leaf-800 border border-leaf-600 focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 text-white text-sm transition-all" placeholder="Masukkan nama Anda...">
+                                <label for="form-name" class="block text-xs font-bold text-stone-300 uppercase tracking-wider mb-2">Nama Lengkap</label>
+                                <input type="text" id="form-name" required class="w-full px-4 py-3 rounded-xl bg-kopi2coffee-black border border-kopi2coffee-deep/40 focus:border-kopi2coffee-red focus:outline-none focus:ring-1 focus:ring-kopi2coffee-red text-white text-sm transition-all" placeholder="Masukkan nama Anda...">
                             </div>
                             <div>
-                                <label for="form-email" class="block text-xs font-bold text-leaf-200 uppercase tracking-wider mb-2">Alamat Email</label>
-                                <input type="email" id="form-email" required class="w-full px-4 py-3 rounded-xl bg-leaf-800 border border-leaf-600 focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 text-white text-sm transition-all" placeholder="contoh@email.com">
+                                <label for="form-email" class="block text-xs font-bold text-stone-300 uppercase tracking-wider mb-2">Alamat Email</label>
+                                <input type="email" id="form-email" required class="w-full px-4 py-3 rounded-xl bg-kopi2coffee-black border border-kopi2coffee-deep/40 focus:border-kopi2coffee-red focus:outline-none focus:ring-1 focus:ring-kopi2coffee-red text-white text-sm transition-all" placeholder="contoh@email.com">
                             </div>
                             <div>
-                                <label for="form-msg" class="block text-xs font-bold text-leaf-200 uppercase tracking-wider mb-2">Isi Pesan / Saran</label>
-                                <textarea id="form-msg" rows="4" required class="w-full px-4 py-3 rounded-xl bg-leaf-800 border border-leaf-600 focus:border-accent-500 focus:outline-none focus:ring-1 focus:ring-accent-500 text-white text-sm transition-all resize-none" placeholder="Tulis masukan, kritik atau pemesanan kustom..."></textarea>
+                                <label for="form-msg" class="block text-xs font-bold text-stone-300 uppercase tracking-wider mb-2">Isi Pesan / Masukan</label>
+                                <textarea id="form-msg" rows="4" required class="w-full px-4 py-3 rounded-xl bg-kopi2coffee-black border border-kopi2coffee-deep/40 focus:border-kopi2coffee-red focus:outline-none focus:ring-1 focus:ring-kopi2coffee-red text-white text-sm transition-all resize-none" placeholder="Tulis kritik, saran, atau pemesanan kustom..."></textarea>
                             </div>
                             
-                            <button type="submit" class="w-full py-3.5 rounded-xl bg-accent-500 hover:bg-accent-400 text-leaf-950 font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2">
+                            <button type="submit" class="w-full py-3.5 rounded-xl bg-kopi2coffee-red hover:bg-red-700 text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2">
                                 <i class="fa-solid fa-paper-plane"></i> Kirim Masukan
                             </button>
                         </form>
@@ -608,34 +615,32 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-leaf-900 border-t border-leaf-950 py-12">
+    <footer class="bg-kopi2coffee-black border-t border-kopi2coffee-deep/40 py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-leaf-800">
-                <a href="#" class="flex items-center gap-2 group">
-                    <span class="w-10 h-10 rounded-full bg-accent-500 flex items-center justify-center text-leaf-900 font-bold text-xl group-hover:bg-accent-400 transition-all">
-                        <i class="fa-solid fa-leaf"></i>
-                    </span>
-                    <span class="font-serif text-xl tracking-wider font-bold text-white group-hover:text-accent-400 transition-colors">
-                        JAVA <span class="text-accent-500">&</span> CO.
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-kopi2coffee-deep/20">
+                <a href="#" class="flex items-center gap-3 group">
+                    <img src="image_a42015.png" alt="Logo Kopi Tu" class="h-10 w-auto object-contain">
+                    <span class="font-serif text-xl tracking-wider font-bold text-white group-hover:text-kopi2coffee-red transition-colors">
+                        KOPI <span class="text-kopi2coffee-red">TU</span>
                     </span>
                 </a>
                 
                 <!-- Social Icons -->
                 <div class="flex items-center gap-4">
-                    <a href="#" class="w-10 h-10 rounded-full bg-leaf-800 hover:bg-accent-500 text-leaf-300 hover:text-leaf-950 flex items-center justify-center border border-leaf-700 transition-all" aria-label="Instagram">
+                    <a href="#" class="w-10 h-10 rounded-full bg-kopi2coffee-dark hover:bg-kopi2coffee-red text-stone-300 hover:text-white flex items-center justify-center border border-kopi2coffee-deep/30 transition-all" aria-label="Instagram">
                         <i class="fa-brands fa-instagram text-lg"></i>
                     </a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-leaf-800 hover:bg-accent-500 text-leaf-300 hover:text-leaf-950 flex items-center justify-center border border-leaf-700 transition-all" aria-label="Facebook">
+                    <a href="#" class="w-10 h-10 rounded-full bg-kopi2coffee-dark hover:bg-kopi2coffee-red text-stone-300 hover:text-white flex items-center justify-center border border-kopi2coffee-deep/30 transition-all" aria-label="Facebook">
                         <i class="fa-brands fa-facebook text-lg"></i>
                     </a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-leaf-800 hover:bg-accent-500 text-leaf-300 hover:text-leaf-950 flex items-center justify-center border border-leaf-700 transition-all" aria-label="TikTok">
+                    <a href="#" class="w-10 h-10 rounded-full bg-kopi2coffee-dark hover:bg-kopi2coffee-red text-stone-300 hover:text-white flex items-center justify-center border border-kopi2coffee-deep/30 transition-all" aria-label="TikTok">
                         <i class="fa-brands fa-tiktok text-lg"></i>
                     </a>
                 </div>
             </div>
 
-            <div class="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 text-leaf-400 text-xs text-center">
-                <p>&copy; 2026 Java & Co. Premium Green Coffee & Bistro. Hak Cipta Dilindungi Undang-Undang.</p>
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 text-stone-400 text-xs text-center">
+                <p>&copy; 2026 Kopi Tu Kedai Kopi Klasik Moka Pot. Hak Cipta Dilindungi Undang-Undang.</p>
                 <div class="flex gap-4">
                     <a href="#" class="hover:text-white">Kebijakan Privasi</a>
                     <a href="#" class="hover:text-white">Syarat & Ketentuan</a>
@@ -680,15 +685,15 @@
             // Adjust button states (Active / Inactive look)
             const buttons = document.querySelectorAll('.category-btn');
             buttons.forEach(btn => {
-                btn.classList.remove('active', 'bg-accent-500', 'text-leaf-950', 'font-bold', 'shadow-md', 'shadow-accent-500/20');
-                btn.classList.add('bg-leaf-700', 'text-leaf-100', 'border', 'border-leaf-600/60');
+                btn.classList.remove('active', 'bg-kopi2coffee-red', 'text-white', 'font-bold', 'shadow-md');
+                btn.classList.add('bg-kopi2coffee-deep/20', 'text-stone-200', 'border', 'border-kopi2coffee-deep/40');
             });
 
             // Set current button to active
             const currentBtn = document.getElementById(`btn-${category}`);
             if (currentBtn) {
-                currentBtn.classList.remove('bg-leaf-700', 'text-leaf-100', 'border', 'border-leaf-600/60');
-                currentBtn.classList.add('active', 'bg-accent-500', 'text-leaf-950', 'font-bold', 'shadow-md', 'shadow-accent-500/20');
+                currentBtn.classList.remove('bg-kopi2coffee-deep/20', 'text-stone-200', 'border', 'border-kopi2coffee-deep/40');
+                currentBtn.classList.add('active', 'bg-kopi2coffee-red', 'text-white', 'font-bold', 'shadow-md');
             }
 
             // Animate filter on cards
@@ -728,7 +733,7 @@
 
             // Show beautiful notification message instead of prompt/alert
             notification.className = "p-4 rounded-xl text-center text-sm font-semibold transition-all duration-300 bg-emerald-950/80 border border-emerald-800 text-emerald-400 shadow-lg";
-            notification.innerHTML = `<i class="fa-solid fa-circle-check mr-2"></i> Terima kasih ${name}, saran atau pesan Anda berhasil terkirim!`;
+            notification.innerHTML = `<i class="fa-solid fa-circle-check mr-2"></i> Terima kasih ${name}, pesan Anda ke Kopi Tu berhasil terkirim!`;
             notification.classList.remove('hidden');
 
             // Hide after 6 seconds
@@ -741,10 +746,10 @@
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
             if (window.scrollY > 50) {
-                nav.classList.add('py-4', 'shadow-xl', 'shadow-leaf-900/40');
+                nav.classList.add('py-4', 'shadow-xl', 'shadow-black/50');
                 nav.classList.remove('py-6');
             } else {
-                nav.classList.remove('py-4', 'shadow-xl', 'shadow-leaf-900/40');
+                nav.classList.remove('py-4', 'shadow-xl', 'shadow-black/50');
             }
         });
     </script>
