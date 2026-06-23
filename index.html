@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kopi2coffee</title>
+    <title>KOPI TU - Premium Green Coffee & Bistro</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Playfair Display for Serifs, Plus Jakarta Sans for Body -->
@@ -22,13 +22,13 @@
                         serif: ['"Playfair Display"', 'serif'],
                     },
                     colors: {
-                        // Palet Warna KOPI TU Resmi dari Logo
+                        // Palet Warna Resmi "KOPI TU"
                         kopi2coffee: {
-                            deep: '#0d522c',   // Hijau botani utama logo
+                            deep: '#0d522c',   // Hijau botani utama logo Anda
                             medium: '#0a3f22', // Hijau sedang untuk gradasi
                             dark: '#052212',   // Hijau sangat gelap untuk depth
-                            black: '#000000',  // Hitam frame logo
-                            red: '#bc1b21',    // Merah ceri kopi untuk aksen/tombol
+                            black: '#000000',  // Hitam frame logo Anda
+                            red: '#bc1b21',    // Merah ceri kopi dari logo Anda untuk aksen tombol
                             light: '#f4fbf7',  // Putih bernuansa hijau super lembut
                         }
                     }
@@ -57,9 +57,9 @@
     <nav class="fixed top-0 left-0 w-full z-50 glass border-b border-kopi2coffee-deep/30 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-                <!-- Brand Logo -->
+                <!-- Brand Logo (Menggunakan Logo Kopi Tu Anda) -->
                 <a href="#" class="flex items-center gap-3 group">
-                   <img src="logo.png" alt="Logo Kopi Tu" class="h-12 w-auto">
+                    <img src="image_a42015.png" alt="Logo Kopi Tu" class="h-14 w-auto object-contain drop-shadow-[0_2px_8px_rgba(13,82,44,0.4)] group-hover:scale-105 transition-all">
                     <span class="font-serif text-2xl tracking-wider font-bold text-white group-hover:text-kopi2coffee-red transition-colors">
                         KOPI <span class="text-kopi2coffee-red">TU</span>
                     </span>
@@ -112,7 +112,7 @@
             <div class="absolute inset-0 bg-gradient-to-t from-kopi2coffee-dark via-transparent to-kopi2coffee-black"></div>
         </div>
 
-        <!-- Hero Content (Split Layout for Logo Prominence) -->
+        <!-- Hero Content -->
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 
@@ -141,7 +141,7 @@
                     </div>
                 </div>
 
-                <!-- Right Side: Prominent Brand Logo Showcase -->
+                <!-- Right Side: Prominent Brand Logo Showcase (Menggunakan logo resmi Anda) -->
                 <div class="lg:col-span-5 flex justify-center">
                     <div class="relative group">
                         <!-- Glow effect -->
@@ -173,7 +173,8 @@
                     <div class="absolute -bottom-6 -right-6 w-48 h-48 bg-kopi2coffee-red/10 rounded-full blur-3xl"></div>
                     
                     <div class="rounded-3xl overflow-hidden border border-kopi2coffee-deep/40 shadow-2xl relative aspect-[4/3] sm:aspect-video lg:aspect-square bg-kopi2coffee-black">
-                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover filter brightness-75 group-hover:scale-105 transition-transform duration-700" alt="Beautiful garden cafe interior">
+                        <!-- PETUNJUK: Anda juga bisa mengunggah foto cafe Anda di GitHub utama dengan nama "tentang-cafe.jpg" -->
+                        <img src="tentang-cafe.jpg" onerror="this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=800&auto=format&fit=crop'" class="w-full h-full object-cover filter brightness-75 group-hover:scale-105 transition-transform duration-700" alt="Beautiful garden cafe interior">
                         <!-- Tiny Accent Stats Badge -->
                         <div class="absolute bottom-6 left-6 p-4 rounded-2xl glass border border-kopi2coffee-deep/40 shadow-xl flex items-center gap-4">
                             <div class="w-12 h-12 rounded-xl bg-kopi2coffee-red flex items-center justify-center text-white text-2xl font-bold">
@@ -262,7 +263,8 @@
                 <!-- Menu Item 1: Espresso Based -->
                 <div class="menu-card bg-kopi2coffee-dark rounded-3xl overflow-hidden border border-kopi2coffee-deep/30 shadow-lg flex flex-col h-full" data-category="coffee">
                     <div class="relative overflow-hidden aspect-[4/3]">
-                        <img src="https://images.unsplash.com/photo-151097252790b-af4f42dfb67f?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="Espresso / Latte">
+                        <!-- PETUNJUK: Cukup upload file "menu1.png" atau "menu1.jpg" ke GitHub Anda agar otomatis memuat foto Anda -->
+                        <img src="menu1.jpg" onerror="this.src='https://images.unsplash.com/photo-151097252790b-af4f42dfb67f?q=80&w=400&auto=format&fit=crop'" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="Espresso / Latte">
                         <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-kopi2coffee-black/90 text-kopi2coffee-red text-xs font-bold border border-kopi2coffee-deep/30">Hot / Ice</span>
                     </div>
                     <div class="p-6 flex flex-col flex-grow justify-between">
@@ -287,7 +289,8 @@
                 <!-- Menu Item 2: Signature Ice Blend -->
                 <div class="menu-card bg-kopi2coffee-dark rounded-3xl overflow-hidden border border-kopi2coffee-deep/30 shadow-lg flex flex-col h-full" data-category="signature">
                     <div class="relative overflow-hidden aspect-[4/3]">
-                        <img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="Toffee Caramel Mocha">
+                        <!-- PETUNJUK: Cukup upload file "menu2.png" atau "menu2.jpg" ke GitHub Anda agar otomatis memuat foto Anda -->
+                        <img src="menu2.jpg" onerror="this.src='https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=400&auto=format&fit=crop'" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="Toffee Caramel Mocha">
                         <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-kopi2coffee-red text-white text-xs font-bold shadow-md">Best Seller</span>
                     </div>
                     <div class="p-6 flex flex-col flex-grow justify-between">
@@ -312,7 +315,8 @@
                 <!-- Menu Item 3: Coffee - Espresso Based -->
                 <div class="menu-card bg-kopi2coffee-dark rounded-3xl overflow-hidden border border-kopi2coffee-deep/30 shadow-lg flex flex-col h-full" data-category="coffee">
                     <div class="relative overflow-hidden aspect-[4/3]">
-                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="Americano">
+                        <!-- PETUNJUK: Cukup upload file "menu3.png" atau "menu3.jpg" ke GitHub Anda agar otomatis memuat foto Anda -->
+                        <img src="menu3.jpg" onerror="this.src='https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=400&auto=format&fit=crop'" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="Americano">
                         <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-kopi2coffee-black/90 text-kopi2coffee-red text-xs font-bold border border-kopi2coffee-deep/30">Hot / Ice</span>
                     </div>
                     <div class="p-6 flex flex-col flex-grow justify-between">
@@ -337,7 +341,8 @@
                 <!-- Menu Item 4: Non-Coffee -->
                 <div class="menu-card bg-kopi2coffee-dark rounded-3xl overflow-hidden border border-kopi2coffee-deep/30 shadow-lg flex flex-col h-full" data-category="non-coffee">
                     <div class="relative overflow-hidden aspect-[4/3]">
-                        <img src="https://images.unsplash.com/photo-1536256263959-770b48d82b0a?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="Premium Matcha Latte">
+                        <!-- PETUNJUK: Cukup upload file "menu4.png" atau "menu4.jpg" ke GitHub Anda agar otomatis memuat foto Anda -->
+                        <img src="menu4.jpg" onerror="this.src='https://images.unsplash.com/photo-1536256263959-770b48d82b0a?q=80&w=400&auto=format&fit=crop'" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="Premium Matcha Latte">
                         <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-kopi2coffee-black/90 text-kopi2coffee-red text-xs font-bold border border-kopi2coffee-deep/30">Hot / Ice</span>
                     </div>
                     <div class="p-6 flex flex-col flex-grow justify-between">
@@ -362,7 +367,8 @@
                 <!-- Menu Item 5: Pastry & Food -->
                 <div class="menu-card bg-kopi2coffee-dark rounded-3xl overflow-hidden border border-kopi2coffee-deep/30 shadow-lg flex flex-col h-full" data-category="pastry">
                     <div class="relative overflow-hidden aspect-[4/3]">
-                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="Butter Croissant">
+                        <!-- PETUNJUK: Cukup upload file "menu5.png" atau "menu5.jpg" ke GitHub Anda agar otomatis memuat foto Anda -->
+                        <img src="menu5.jpg" onerror="this.src='https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=400&auto=format&fit=crop'" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="Butter Croissant">
                         <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-kopi2coffee-red text-white text-xs font-bold shadow-md">Fresh</span>
                     </div>
                     <div class="p-6 flex flex-col flex-grow justify-between">
@@ -387,7 +393,8 @@
                 <!-- Menu Item 6: Signature non-coffee blend -->
                 <div class="menu-card bg-kopi2coffee-dark rounded-3xl overflow-hidden border border-kopi2coffee-deep/30 shadow-lg flex flex-col h-full" data-category="signature">
                     <div class="relative overflow-hidden aspect-[4/3]">
-                        <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?q=80&w=400&auto=format&fit=crop" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="Iced Hazelnut Frappe">
+                        <!-- PETUNJUK: Cukup upload file "menu6.png" atau "menu6.jpg" ke GitHub Anda agar otomatis memuat foto Anda -->
+                        <img src="menu6.jpg" onerror="this.src='https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?q=80&w=400&auto=format&fit=crop'" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" alt="Iced Hazelnut Velvet">
                         <span class="absolute top-4 right-4 px-3 py-1 rounded-full bg-kopi2coffee-black/90 text-kopi2coffee-red text-xs font-bold border border-kopi2coffee-deep/30">Ice Only</span>
                     </div>
                     <div class="p-6 flex flex-col flex-grow justify-between">
